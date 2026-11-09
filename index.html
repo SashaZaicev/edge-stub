@@ -37,13 +37,8 @@
     padding: 28px 16px;
     border-bottom: 1px solid var(--line);
   }
-  .logo {
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: 30px;
-    letter-spacing: 0.18em;
-    padding-left: 0.18em; /* компенсирует letter-spacing, чтобы логотип был по центру */
-  }
+  .logo { display: block; line-height: 0; }
+  .logo img { display: block; height: 30px; width: auto; }
 
   main {
     flex: 1;
@@ -132,7 +127,7 @@
 
   @media (max-width: 480px) {
     header { padding: 22px 16px; }
-    .logo { font-size: 26px; }
+    .logo img { height: 26px; }
     main { padding: 56px 16px 44px; }
     .rule { margin: 40px auto; }
     .btn { flex: 1 1 100%; }
@@ -142,8 +137,7 @@
 <body>
 
 <header>
-  <!-- Если пришлют логотип файлом: <img src="logo.svg" alt="EDGE" height="28"> -->
-  <a class="logo" href="/">EDGE</a>
+  <a class="logo" href="/"><img src="/logo.png" alt="EDGE" width="98" height="30"></a>
 </header>
 
 <main>
